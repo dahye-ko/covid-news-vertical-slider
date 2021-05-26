@@ -1,0 +1,65 @@
+/* COMMON */
+
+html, body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Swiper 슬라이더 */
+
+.swiper-container {
+    width: 450px;
+    height: 50px;
+    border: 1px solid #000;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-slide {
+    background: #eee;
+    width: 100%;
+    /* 슬라이드를 두 영역의 grid로 분할 */
+    /* 그리드1: 100px */
+    /* 그리드2: 350px */
+    display: grid;
+    grid-template-columns: 100px 350px;
+}
+
+.swiper-slide.swiper-slide-duplicate {
+    display: none;
+}
+
+/* 그리드1: 대륙명 */
+
+.continentName {
+    text-align: center;
+}
+
+/* 그리드 2: 뉴스제목 */
+
+/* 350px의 90%에 해당하는 너비 */
+
+/* 너비를 넘어서는 텍스트는 ...으로 축약 */
+
+.newsTitle {
+    width: 90%;
+    text-overflow: ellipsis;
+    /* text-overflow: ellipsis를 적용하기 위해서는 */
+    /* 반드시 아래 두 속성이 있어야 함 */
+    white-space: nowrap;
+    overflow: hidden;
+}
